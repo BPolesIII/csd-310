@@ -1,0 +1,30 @@
+import MongoDB
+
+MongoDB: insert_one() 
+Brad = {
+    "first_name": "Brad"
+}
+
+Brad_student_id = students.insert_one(Brad).inserted.id(1007)
+print(Brad_student_id)
+
+MongoDB: insert_onet()
+Emily = {
+    "first_name":"Emily"
+}
+
+Emily_student_id = student.insert_one(Emily).insert_id(1008)
+print(Emily_student_id)
+
+MongoDB: insert_one()
+Neil = {
+    "first_name":"Neil"
+}
+
+Neil_student_id = students.insert_one(Neil).inserted_id(1009)
+print(Neil_student_id)
+
+MongoDB: find()
+docs = db.collection_name.find_one({"student_id": "1009"})
+
+print(doc["student_id"])
