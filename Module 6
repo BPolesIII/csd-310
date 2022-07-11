@@ -1,0 +1,37 @@
+pytech_update.py
+
+from pymongo import mongo_client
+
+client = MongoClient("localhost")
+
+db = client["mydb"]
+
+pytech = db["PyTech"]
+
+records = [
+    {
+        "student_id": "1007",
+        "first_name": "Brad",
+        "last_name": "Bell"
+    },
+    {
+        "student_id": "1008",
+        "first_name": "Emily",
+        "last_name": "Egghead"
+    },
+    {
+        "student_id": "1009",
+        "first_name": "Neil",
+        "last_name": "Neighbor"
+    }
+]
+
+for record in records:
+    new_student_id = pytech.insert_one(record).insert_id
+    print(new_student_id)
+
+docs = pytech.find()
+for doc in docs:
+    print(doc)
+
+print(pytech.find_one({"student_id": "1007"}))
