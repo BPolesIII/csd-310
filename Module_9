@@ -1,0 +1,32 @@
+db = mysql.connector.connect (
+    host = "localhost",
+    user = "root",
+    password = ""
+    database = "pysports"
+)
+{
+INSERT INTO PySports (column1, column2, column3, column4) 
+VALUES (value1, value2, value3, value4)
+
+INSERT INTO TABLE = (
+    table_name: PySports;
+    column1: player_id;
+    column2: first_name;
+    column3: last_name;
+    column4: team_name;
+    value1: 1, 2, 3, 4;
+    value2: Billy, Elizabeth, Nevin, Samantha;
+    value3: Bigalow, Ettinger, Neptune, Sailor;
+    value4: Team_Earth,Team_Fire, Team_Water, Team_Wind;
+)
+
+SELECT <columns> FROM <table1> INNER JOIN <table2> ON <table1.column> = <table2.column>
+db = db.cursor()
+
+query = "SELECT team_id, first_name, last_name, team_name FROM table"
+
+cursor.execute(query)
+
+for team in cursor:
+    print(team)
+}
