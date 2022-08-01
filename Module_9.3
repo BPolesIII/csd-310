@@ -1,0 +1,32 @@
+db = mysql.connector.connect (
+    host = "localhost",
+    user = "root",
+    password = ""
+    database = "pysports"
+)
+{
+UPDATE <table> SET <column> WHERE <column> = <value>
+    (
+        team_id = 2,
+        first_name = 'Ellen',
+        last_name = 'Emitter',
+        first_name = 'Elizabeth';
+
+    )
+DELETE FROM <table> WHERE <column> = <value>    
+    (
+        first_name = 'Elizabeth';
+    )
+INSERT INTO <table> (<columns>) VALUES (<values>)
+    (
+        VALUES ('Ellen', 'Emitter', 2)
+    )
+db = db.cursor()
+
+query = "SELECT team_id, first_name, last_name, team_name FROM table"
+
+cursor.execute(query)
+
+for team in cursor:
+    print(team)
+}
